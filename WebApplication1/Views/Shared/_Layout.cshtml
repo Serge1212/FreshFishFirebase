@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebApplication1</title>
+    <link rel="shortcut icon" type="image/x-icon" href="~/favicon.png" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/StyleMenu.css" />
+</head>
+<body>
+    <nav class="main-menu">
+        <a asp-controller="Main" asp-action="Index">
+            <img class="menu-icon" src="~/Image/logo/SoloLogoIcon.png">
+        </a>
+        <ul class="menu-item-block">
+            <li class="menu-item">
+                <button class="menu-button">
+                    <span class="iconify color_icon" data-inline="false" data-icon="heroicons-outline:menu">
+                    </span>
+                </button>
+            </li>
+            <li class="menu-item">
+                <div class="search_button">
+                    <span class="iconify color_icon" data-inline="false" data-icon="ant-design:search-outlined">
+                    </span>
+                </div>
+            </li>
+            <li class="menu-item">
+                <a href="/newindex.htm">
+                    <span class="iconify color_icon" data-inline="false" data-icon="bi:bar-chart-fill">
+                    </span>
+                </a>
+            </li>
+            <li class="menu-item dropdown-items">
+                <span class="iconify color_icon" data-inline="false" data-icon="dashicons:database"></span>
+                <ul class="menu-item-dropdown-block">
+                    <li class="menu-item-in">
+                        <a asp-controller="Product" asp-action="Product"><span class="iconify color_icon" data-inline="false" data-icon="la:fish-solid" style="font-size: 20px;"></span></a>
+                    </li>
+                    <li class="menu-item-in">
+                        <a asp-controller="Worker" asp-action="Worker"><span class="iconify color_icon" data-inline="false" data-icon="emojione-monotone:construction-worker" style="font-size: 20px;"></span></a>
+                    </li>
+                    <li class="menu-item-in">
+                        <a asp-controller="Vehicles" asp-action="Vehicles"><span class="iconify color_icon" data-inline="false" data-icon="teenyicons:garage-outline" style="font-size: 20px;"></span></a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a href="#">
+                    <span class="iconify color_icon" data-inline="false" data-icon="bx:bxs-truck">
+                    </span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#">
+                    <span class="iconify color_icon" data-inline="false" data-icon="mdi:fishbowl">
+                    </span>
+                </a>
+            </li>
+            <li class="menu-item-line">
+                <div class="menu-line"></div>
+            </li>
+            <li class="menu-item-line">
+                <a href="#">
+                    <span class="iconify color_icon" data-inline="false" data-icon="bx:bx-help-circle">
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="Container-submenu" id="Submenu">
+        <div class="Title-block-submenu">
+            <button class="submenu-button">
+                <span class="iconify color_icon_pop-up_menu" data-inline="false" data-icon="heroicons-outline:menu">
+                </span>
+            </button>
+            <span class="Submenu-title">Menu</span>
+            <div class="Profile-button">
+                <span class="iconify color_icon_pop-up_menu" data-inline="false" data-icon="bi:person-circle"></span>
+            </div>
+        </div>
+        <div>
+            <div class="Search-box">
+                <span class="iconify search-icon" data-inline="false" data-icon="ant-design:search-outlined"></span>
+                <input class="Search-input" type="search" name="" placeholder="Search...">
+            </div>
+        </div>
+        <div class="List-box-in-pop-up-menu">
+            <ul class="list-in-pop-up-menu">
+                <li class="list-item-in-menu">
+                    <a href="#" class="link-in-pop-up-menu">
+                        <div class="link-conteiner">
+                            <span class="iconify primary_color_icon" data-inline="false" data-icon="bi:bar-chart-fill"></span>
+                            <p class="text-in-list">Income</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="list-item-in-menu top-margin dropdown-pop-up-menu">
+                    <a class="link-in-pop-up-menu">
+                        <div class="link-conteiner">
+                            <span class="iconify primary_color_icon" data-inline="false" data-icon="dashicons:database"></span>
+                            <p class="text-in-list dropdown-after">Database</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="drop-down-im-pop-up-menu">
+                    <div class="box-and-left-line">
+                        <div class="box-dropdown">
+                            <ul class="dropdown-list-in-pop-up-menu">
+                                <li class="menu-item-in-dropdown">
+                                    <a asp-controller="Product" asp-action="Product" class="link-in-pop-up-menu">
+                                        <div class="link-conteiner">
+                                            <span class="iconify primary_color_icon" data-inline="false" data-icon="la:fish-solid" style="font-size: 24px;"></span>
+                                            <p class="text-in-list bottom-text-margin">Product</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="menu-item-in-dropdown">
+                                    <a asp-controller="Worker" asp-action="Worker" class="link-in-pop-up-menu">
+                                        <div class="link-conteiner">
+                                            <span class="iconify primary_color_icon" data-inline="false" data-icon="emojione-monotone:construction-worker" style="font-size: 20px;"></span>
+                                            <p class="text-in-list bottom-text-margin">Worker</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="menu-item-in-dropdown">
+                                    <a asp-controller="Vehicles" asp-action="Vehicles" class="link-in-pop-up-menu">
+                                        <div class="link-conteiner">
+                                            <span class="iconify primary_color_icon" data-inline="false" data-icon="teenyicons:garage-outline" style="font-size: 20px;"></span>
+                                            <p class="text-in-list bottom-text-margin">Vehicles</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-item-in-menu top-margin">
+                    <a href="#" class="link-in-pop-up-menu">
+                        <div class="link-conteiner">
+                            <span class="iconify primary_color_icon" data-inline="false" data-icon="bx:bxs-truck"></span>
+                            <p class="text-in-list">Delivery</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="list-item-in-menu top-margin">
+                    <a href="#" class="link-in-pop-up-menu">
+                        <div class="link-conteiner">
+                            <span class="iconify primary_color_icon" data-inline="false" data-icon="mdi:fishbowl"></span>
+                            <p class="text-in-list bottom-text-margin">Pools</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="menu-item-line">
+                    <div class="pop-up-menu-line"></div>
+                </li>
+                <li class="list-item-in-menu top-margin5px">
+                    <a href="#" class="link-in-pop-up-menu">
+                        <div class="link-conteiner">
+                            <span class="iconify primary_color_icon" data-inline="false" data-icon="bx:bx-help-circle"></span>
+                            <p class="text-in-list">Help</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="body-conteiner">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/JsWeb.js"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

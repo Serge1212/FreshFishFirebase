@@ -1,0 +1,129 @@
+﻿@model IEnumerable<WebApplication1.Models.Worker>
+@{ ViewData["Title"] = "Workers"; }
+<link rel="stylesheet" href="~/css/StyleDatabase.css" />
+<div>
+    <div class="Tools_conteiner_block">
+        <div>
+            <div class="dropdown-el">
+                <input type="radio" name="sortType" class="comboboxItem" value="Name" checked="checked" id="sort-relevance"><label class="s1" for="sort-relevance">Name</label>
+                <input type="radio" name="sortType" class="comboboxItem" value="Surname" id="sort-relevance1"><label for="sort-relevance1">Surname</label>
+                <input type="radio" name="sortType" class="comboboxItem" value="Patronimic" id="sort-relevance2"><label for="sort-relevance2">Patronimic</label>
+                <input type="radio" name="sortType" class="comboboxItem" value="Position" id="sort-relevance3"><label for="sort-relevance3">Position</label>
+                <input type="radio" name="sortType" class="comboboxItem" value="Salary" id="sort-relevance4"><label for="sort-relevance4">Salary</label>
+                <input type="radio" name="sortType" class="comboboxItem" value="Phone number" id="sort-relevance5"><label for="sort-relevance5">Phone number</label>
+            </div>
+        </div>
+        <div class="SearchBox">
+            <input type="text" class="Search" placeholder="Search" />
+            <span class="iconify Search_icon" data-inline="false" data-icon="ant-design:search-outlined"></span>
+        </div>
+        <div class="Tools">
+            <div class="ToolConteiner">
+                <button class="Toolbuttons">
+                    <span class="iconify Tool_icon_color" data-icon="dashicons:database-add" data-inline="false"></span>
+                </button>
+                <p class="text_in_button">
+                    Add
+                </p>
+            </div>
+            <div class="ToolConteiner">
+                <button class="Toolbuttons">
+                    <span class="iconify Tool_icon_color" data-icon="ant-design:edit-outlined" data-inline="false"></span>
+                </button>
+                <p class="text_in_button">
+                    Edit
+                </p>
+            </div>
+            <div class="ToolConteiner">
+                <button class="Toolbuttons">
+                    <span class="iconify Tool_icon_color" data-icon="ant-design:delete-outlined" data-inline="false"></span>
+                </button>
+                <p class="text_in_button">
+                    Delete
+                </p>
+
+            </div>
+            <div class="ToolConteiner">
+                <button class="Toolbuttons">
+                    <span class="iconify Tool_icon_color Tool_convert" data-icon="codicon:save-as" data-inline="false"></span>
+                </button>
+                <p class="text_in_button">
+                    Convert to
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="toolsdiv">
+    </div>
+</div>
+
+<p>
+    <a asp-action="Create">Add New Worker</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Surname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Patronymic)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Position)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Salary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AdditionInfo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Surname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Patronymic)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Position)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Salary)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PhoneNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AdditionInfo)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

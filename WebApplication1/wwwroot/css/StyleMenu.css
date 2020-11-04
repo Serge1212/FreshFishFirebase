@@ -1,0 +1,345 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/*#region Icons*/
+/*mein icon*/
+.menu-icon {
+    margin-top: 10px;
+    margin-left: 5px;
+    height: 40px;
+    width: 40px;
+}
+
+.iconify {
+    font-size: 24px;
+}
+/*pop-up menu icon color*/
+.color_icon_pop-up_menu {
+    padding: 2px;
+    color: #3DBFF0;
+}
+
+.color_icon {
+    padding: 4px;
+    color: #3DBFF0;
+}
+
+    .color_icon:hover, .color_icon_pop-up_menu:hover {
+        border-radius: 8px;
+        background-color: #3DBFF0;
+        color: white;
+    }
+/*Icon in pop-up menu*/
+.search-icon {
+    color: #3DBFF0;
+    padding: 4px;
+    float: center;
+}
+
+.primary_color_icon {
+    color: #3DBFF0;
+}
+/*#endregion*/
+
+/*#region Main memu */
+.main-menu {
+    position: absolute;
+    bottom: 8px;
+    display: block;
+    top: 8px;
+    z-index: 10;
+    left: 8px;
+    height: auto;
+    background: white;
+    width: 50px;
+    overflow: hidden;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px
+}
+
+/*menu block item*/
+.menu-item-block {
+    padding: 0px;
+    padding-top: 15px;
+    padding-left: 9px;
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    list-style: none;
+    display: table-cell;
+}
+
+/*menu block item*/
+.menu-item-block {
+    padding: 0px;
+    padding-top: 15px;
+    padding-left: 9px;
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    list-style: none;
+    display: table-cell;
+}
+
+/*menu block item*/
+.menu-item-block {
+    padding: 0px;
+    padding-top: 15px;
+    padding-left: 9px;
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    list-style: none;
+    display: table-cell;
+}
+
+/*menu items*/
+.menu-item {
+    margin-top: 13px;
+}
+
+.menu-line {
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    left: 10px;
+    background-color: #999999;
+}
+
+.menu-item-line {
+    padding-top: 10px;
+}
+/*menu button*/
+.menu-button {
+    background: none;
+    border: none;
+    padding: 0px;
+}
+
+    .menu-button:focus {
+        outline: none;
+    }
+/*dropdown menu items*/
+.menu-item-dropdown-block {
+    display: none;
+    padding: 0px;
+    margin-top: 9px;
+    margin-left: 2px;
+    background-color: rgba(68, 199, 244, 0.15);
+    border-radius: 8px;
+    box-sizing: border-box;
+    position: relative;
+    list-style: none;
+}
+
+.menu-item-in {
+    padding: 0px;
+}
+/*#endregion*/
+
+/*#region pop-up menu*/
+
+/*main coteiner*/
+.Container-submenu {
+    display: none;
+    z-index: 100;
+    position: absolute;
+    width: 200px;
+    height: 430px;
+    background: white;
+    left: 70px;
+    top: 85px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+/*Title block*/
+.Title-block-submenu {
+    display: flex;
+    margin-top: 0px;
+    margin-left: 5px;
+}
+
+/*Title*/
+.Submenu-title {
+    font-weight: bold;
+    font-family: Roboto;
+    color: #3DBFF0;
+    font-size: 16px;
+    margin-left: 2px;
+    margin-top: 12px;
+}
+
+/*Close menu item*/
+.submenu-button {
+    background: none;
+    border: none;
+    padding: 0px;
+    margin-top: 7px;
+}
+
+    .submenu-button:focus {
+        outline: none;
+    }
+
+/*Profile button*/
+.Profile-button {
+    margin-left: 88px;
+    margin-top: 7px;
+}
+/*Search box*/
+.Search-box {
+    margin-top: 12px;
+    display: flex;
+    box-sizing: border-box;
+    height: 32px;
+    width: 185px;
+    margin-left: 8px;
+    border: none;
+    text-align: left;
+    background: #D6EAF1;
+    border-radius: 8px;
+}
+
+.Search-input {
+    font-family: Roboto;
+    padding-left: 2px;
+    width: 160px;
+    background: transparent;
+    border: transparent;
+}
+
+    .Search-input::placeholder {
+        color: #3DBFF0;
+    }
+
+    .Search-input:focus {
+        outline: none;
+    }
+
+/*List*/
+.list-in-pop-up-menu {
+    padding: 0px;
+    padding-top: 0px;
+    margin-left: 5px;
+    position: relative;
+    list-style: none;
+}
+
+.list-item-in-menu {
+    display: block;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+    padding: 4px;
+    border-radius: 8px;
+    width: 190px;
+    margin-top: 0px;
+}
+
+.link-in-pop-up-menu {
+    text-decoration: none;
+}
+
+.link-conteiner {
+    display: flex;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.text-in-list {
+    padding: 0px;
+    margin: 0px;
+    font-family: Roboto;
+    margin-top: 4px;
+    margin-left: 4px;
+    color: #3DBFF0;
+}
+
+.link-conteiner {
+    padding: 4px;
+    margin: 0px;
+    border-radius: 8px;
+}
+    /*hovers in pop-up menu*/
+    .link-conteiner:hover .primary_color_icon,
+    .link-conteiner:hover .text-in-list {
+        color: white;
+    }
+
+    .link-conteiner:hover .dropdown-after::after {
+        border: 0.3em solid #fff;
+        border-color: #fff transparent transparent transparent;
+    }
+
+    .link-conteiner:hover {
+        background-color: #3DBFF0;
+    }
+
+.dropdown-after::after {
+    content: "";
+    margin-left: 3px;
+    margin-top: 7px;
+    position: absolute;
+    border: 0.3em solid #44C7F4;
+    border-color: #44C7F4 transparent transparent transparent;
+    transition: .4s all ease-in-out;
+}
+
+.top-margin {
+    margin-top: 5px;
+}
+
+.top-margin5px {
+    margin-top: 5px;
+}
+
+.bottom-text-margin {
+    margin: 0px;
+    margin-top: 4px;
+    margin-left: 4px;
+}
+
+.pop-up-menu-line {
+    position: absolute;
+    width: 175px;
+    height: 1px;
+    left: 3px;
+    background-color: #999999;
+}
+/*Dropdown menu*/
+
+.dropdown-list-in-pop-up-menu {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.box-dropdown {
+    background: rgba(68, 199, 244, 0.15);
+    border-radius: 8px;
+    margin-left: 19px;
+    display: block;
+    height: 92px;
+    width: 145px;
+}
+
+.box-and-left-line {
+    margin-left: 19px;
+    display: block;
+    height: 92px;
+    width: 2px;
+    background-color: #3DBFF0;
+}
+
+.menu-item-in-dropdown {
+    margin: 0px;
+    padding: 0px;
+}
+
+/*#endregion*/
+
+/*#region Body */
+.body-conteiner{
+    margin-left:70px;
+}
+/*#endregion*/
