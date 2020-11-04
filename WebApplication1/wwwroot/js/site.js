@@ -1,16 +1,56 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
-
-// Write your Javascript code.
-
-
+﻿
 //#region custom function
 function ClearSearch() {
     $('.Search-input').val('');
 }
+const menuButton = document.querySelector('.Mobile_menu_button');
+const menuO = document.querySelector('.Mobile_menu');
+let menuOpen = false;
+let DropDowmMenuOpen = false;
+$('.dropdowm_mobile_menu').click(function () {
+    if (!DropDowmMenuOpen) {
+        $('.drop_down_in_mobile_menu').animate({
+            'display': 'none'
+        }, 50, function () {
+            $('.drop_down_in_mobile_menu').slideDown(400);
+        });
+        DropDowmMenuOpen = true;
+    }
+    else {
+        $('.drop_down_in_mobile_menu').animate({
+            'display': 'block'
+        }, 50, function () {
+            $('.drop_down_in_mobile_menu').slideUp(400);
+        });
+        DropDowmMenuOpen = false;
+    }
+});
+menuButton.addEventListener('click', () => {
+    if (!menuOpen) {
+        menuButton.classList.add('Open_menu');
+        menuO.classList.add('Open_menu');
+        // menuO.classList.remove('Close_menu');
+        menuOpen = true;
+    }
+    else {
+        // menuO.classList.add('Close_menu');
+        menuButton.classList.remove('Open_menu');
+        menuO.classList.remove('Open_menu');
+        menuOpen = false;
+    }
+})
+//Open menu command
+
+
 //#endregion
 $(document).ready(function () {
 
+    $(window).resize(function () {
+        if ($(window).height() > 500) {
+            menuButton.classList.remove('Open_menu');
+            menuO.classList.remove('Open_menu');
+        }
+    });
     //#region Sub-menu
 
     $('.submenu-button').on('click', function () {
@@ -43,7 +83,6 @@ $(document).ready(function () {
             });
             ClearSearch();
         }
-
         else {
             $('.drop-down-im-pop-up-menu').slideUp(50, function () {
                 $('.menu-item-dropdown-block').animate({
@@ -97,8 +136,6 @@ $(document).ready(function () {
 
     //#region dropdown pop-up menu
 
-
-
     $('.dropdown-pop-up-menu').on('click', function () {
         if ($('.drop-down-im-pop-up-menu').is(':visible')) {
             $('.Container-submenu').animate({
@@ -135,7 +172,6 @@ $(document).ready(function () {
             $('.Container-submenu').fadeIn(400);
         });
     })
-
 });
 
 //#region Pop-up menu
@@ -147,4 +183,5 @@ $(document).click(function () {
         $(".Container-submenu").fadeOut(400);
     }
 });
+
 //#endregion
