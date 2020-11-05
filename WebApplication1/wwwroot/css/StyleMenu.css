@@ -575,7 +575,7 @@
 
 .Scroll_in_mobele_menu {
     height: 60%;
-    overflow: auto;
+    overflow: scroll;
 }
 
 
