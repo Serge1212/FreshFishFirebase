@@ -366,7 +366,6 @@
     top: 10px;
     transition: all .5s ease-in-out;
 }
-
 .Mobile_menu_buttonc:focus {
     outline: none;
 }
